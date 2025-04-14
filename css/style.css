@@ -1,0 +1,82 @@
+body {
+    font-family: initial;
+    background-color: rgb(133, 217, 248);
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-logo {
+    height: 50px;
+    width: 50px;
+    background-image: url(https://picsum.photos/200);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+hr {
+   border-color: rgb(245,171,185);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav>a {
+    text-decoration: none;
+    color: rgb(245, 87, 116);
+    border: 1px solid;
+    padding: 8px;
+}
+
+.banner-img {
+    height: 400px;
+    background-image: url(https://picsum.photos/1000);
+    background-size: cover;
+    background-position: top;
+}
+
+main>section {
+    height: 800px;
+}
+
+.section-content {
+    text-align: center;
+}
+
+form {
+    margin-left: 4em;
+}
+
+.name {
+    width: 288px
+}
+
+.birth {
+    width: 291px
+}
+
+.message {
+    width: 288px;
+    height: 100px;
+}
+
+.space {
+    display: flex;
+    justify-content: space-between;
+    width: 97px;
+}
+
+
+.submit {
+    width: 400px;
+    height: 20px;
+}
+
+footer {
+    text-align: right;
+}
