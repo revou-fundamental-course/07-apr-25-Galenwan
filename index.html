@@ -10,14 +10,17 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+
+
 <body>
     <!-- Header Content -->
     <header class="main-header">
         <!-- Logo -->
-        <div class="main-logo"></div>
+        
+        <img class="main-logo" src="https://picsum.photos/200"/>
 
-        <!-- Navigation* -->
-        <nav>
+        <!-- Navigation -->
+        <nav class="navi">
             <a href="#home-section">Home</a>
             <a href="#our-profile-section">Our Profile</a>
             <a href="#portfolio-section">Portfolio</a>
@@ -32,12 +35,17 @@
         <!-- Home Section -->
         <section id="home-section">
             <header>
-                <h2>Hi _, Welcome to my website~!</h2>
+                <h2>Hi <span id="name"></span>, Welcome to my website~!</h2>
             </header>
 
             <!-- Banner Content* -->
-            <div class="banner-img"></div>
-
+            <div>
+                <img class="img-slideshow" src="https://picsum.photos/1000?random=1" />
+                <img class="img-slideshow" src="https://picsum.photos/1000?random=2" />
+                <img class="img-slideshow" src="https://picsum.photos/1000?random=3" />
+                <button onclick="plusDivs(-1)">Previous</button>
+                <button onclick="plusDivs(1)">Next</button>
+            </div>
             <!-- Banner Text -->
             <article class="section-content">
                 <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
@@ -81,41 +89,62 @@
             </header>
 
             <!-- Message Us Form -->
-            <form >
+            <form name="message-form" onsubmit="return validationForm()">
+
+                <!--Name-->
                 <table>
                     <td>
-                        <div class="space"><label for="name">Name </label><label>:</label></div>
+                        <div class="space">
+                            <label for="name">Name </label><label>:</label>
+                        </div>
                     </td>
-                    <td><input class="name" id="name" type="text" /></td>
+                    <td><input placeholder="Name" name="full-name" class="name" type="text" /></td>
                 </table>
+
+                <!--Date of Birth-->
                 <table>
                     <td>
                     <label for="birth">Date of Birth &nbsp;:</label>
                     </td>
-                    <td><input class="birth" for="birth" type="date"/>
+                    <td><input class="birth" for="birth"  name="birth-date" type="date"/>
                 </table>
+
+                <!--Gender-->
                 <table>
                     <td>
-                        <div class="space"><label for="gender"> Gender </label><label>:</label></div>
+                        <div class="space"><label for="gender"> Gender </label>
+                            <label>:</label>
+                        </div>
                     </td>
                     <td>
-                        <input type="radio" id="first" name="option" value="male">
-                        <label for="first">Male</label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
                     </td>
                     <td>
-                        <input type="radio" id="second" name="option" value="female">
-                        <label for="second">Female</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
                     </td>
                 </table>
+
+                <!--Message-->
                 <table>
                     <td>
-                        <div class="space"><label for="message"> Message </label><label>:</label></div>
+                        <div class="space"><label for="message"> Message </label>
+                            <label>:</label></div>
                     </td>
-                    <td><input id="message" class="message" type="text"/></td>
+                    <td><input placeholder="Message" name="messages" class="message" type="text"/></td>
                 </table>
                 <br>
-                <input type="submit" id="submit" class="submit" value="Submit" >
+                <input type="button" id="submit" class="submit" value="Submit">
+                <script src="js/script.js"></script>
             </form>
+
+            <div>
+                <p>Name: <span id="sender-full-name"></span></p>
+                <p>Date of Birth: <span id="sender-date-birth"></span></p>
+                <p>Gender: <span id="sender-gender"></span></p>
+                <p>Messages: <span id="sender-messages"></span></p>
+            </div>
         </section>
     </main>
 
