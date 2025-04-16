@@ -17,13 +17,12 @@ function validationForm() {
     }
 
     setSenderUI(name, birthDate, gender, messages);
-    
     return false;
 }
 
 function setSenderUI(name, birthDate, gender, messages) {
     document.getElementById("sender-full-name").innerHTML = name;
-    document.getElementById("sender-birth-date").innerHTML = birthDate;
+    document.getElementById("sender-date-birth").innerHTML = birthDate;
     document.getElementById("sender-gender").innerHTML = gender;
     document.getElementById("sender-messages").innerHTML = messages;
 }
