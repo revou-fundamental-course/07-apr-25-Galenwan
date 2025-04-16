@@ -88,8 +88,32 @@
                 <h2>Message Us</h2>
             </header>
 
+            <!-- Form Result-->
+            <div class="form-output"> 
+                <p>
+                    <br>
+                    <strong>Current Time</strong>: 
+
+                    <span id="daysOnly"></span>
+                    <span id="datesOnly"></span>
+                    <span id="monthOnly"></span>
+                    <span id="yearsOnly"></span>
+                    <span id="timeNow"></span>
+                    <br>
+                    <br>
+                    <strong>Name </strong>: <span id="sender-full-name"></span>
+                    <br>
+                    <strong>Date of Birth </strong>: <span id="sender-date-birth"></span>
+                    <br>
+                    <strong>Gender </strong>: <span id="sender-gender"></span>
+                    <br>
+                    <strong>Message </strong>: <span id="sender-messages"></span>
+                </p>
+            </div>  
+
             <!-- Message Us Form -->
-            <form name="message-form" onsubmit="return validationForm()">
+             
+            <form class="form-location" name="message-form" onsubmit="return validationForm()">
 
                 <!--Name-->
                 <table>
@@ -122,11 +146,11 @@
                         </div>
                     </td>
                     <td>
-                        <input type="radio" id="male" name="gender" value="male">
+                        <input type="radio" id="male" name="gender" value="Male">
                         <label for="male">Male</label>
                     </td>
                     <td>
-                        <input type="radio" id="female" name="gender" value="female">
+                        <input type="radio" id="female" name="gender" value="Female">
                         <label for="female">Female</label>
                     </td>
                 </table>
@@ -145,13 +169,8 @@
                 <input type="submit" id="submit" class="submit" value="Submit">
                 <script src="js/script.js"></script>
             </form>
+            
 
-            <div>
-                <p>Name: <span id="sender-full-name"></span></p>
-                <p>Date of Birth: <span id="sender-date-birth"></span></p>
-                <p>Gender: <span id="sender-gender"></span></p>
-                <p>Messages: <span id="sender-messages"></span></p>
-            </div>
         </section>
     </main>
 

@@ -53,3 +53,28 @@ setInterval(() => {
 }, 2000);
 1000 ms = 1 s
 */
+
+
+
+
+const today = new Date();
+const days = today.toLocaleDateString('default', { weekday: 'long'} );
+document.getElementById("daysOnly").innerHTML = days + ", ";
+document.getElementById("datesOnly").innerHTML = today.getDate() ;
+const month = today.toLocaleString('default', { month: 'long' });
+document.getElementById("monthOnly").innerHTML = month;
+document.getElementById("yearsOnly").innerHTML = today.getFullYear();
+
+
+function displayTime() {
+    var today = new Date();
+    var hours = today.getHours();
+    var minutes = today.getMinutes();
+    var seconds = today.getSeconds();
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    var timeString = hours + ":" + minutes + ":" + seconds;
+    document.getElementById("timeNow").innerHTML = timeString;
+  }
+  setInterval(displayTime, 1000); // update every second
