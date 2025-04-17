@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galenwan Company</title>
+    <title>Eraudin Forge</title>
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
@@ -17,13 +17,13 @@
     <header class="main-header">
         <!-- Logo -->
         
-        <img class="main-logo" src="https://picsum.photos/200"/>
+        <img class="main-logo" src="asset/Logo.png" alt="Company Logo" />
 
         <!-- Navigation -->
         <nav>
             <a href="#home-section">Home</a>
+            <a href="#products-section">Products</a>
             <a href="#our-profile-section">Our Profile</a>
-            <a href="#portfolio-section">Portfolio</a>
             <a href="#message-us-section">Message Us</a>
         </nav>
     </header>
@@ -35,19 +35,42 @@
         <!-- Home Section -->
         <section id="home-section">
             <header>
-                <h2>Hi <span id="name"></span>, Welcome to my website~!</h2>
+                <h2>Hi <span id="name"></span>, Welcome to Eraudin Forge!</h2>
+                <p class="start">A website focused on primarily making dice and mini for D&D games</p>
+
             </header>
 
             <!-- Banner Content* -->
             <div>
-                <img class="img-slideshow" src="https://picsum.photos/1000?random=1" />
-                <img class="img-slideshow" src="https://picsum.photos/1000?random=2" />
-                <img class="img-slideshow" src="https://picsum.photos/1000?random=3" />
-                <button onclick="plusDivs(-1)">Previous</button>
-                <button onclick="plusDivs(1)">Next</button>
+                <img class="img-slideshow" src="asset/Dice 1.jpg" alt="First Photo"/>
+                <img class="img-slideshow" src="asset/Mini.jpg" alt="Second Photo"/>
+                <img class="img-slideshow" src="asset/Dice 2.jpg" alt="Third Photo"/>
+                <div class="button-style">
+                    <button class="button-size" onclick="plusDivs(-1)">Previous</button>
+                    <button class="button-size" onclick="plusDivs(1)">Next</button>
+               </div>   
             </div>
             <!-- Banner Text -->
             <article class="section-content">
+                <p>Here are examples of our product</p>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- Products Section -->
+        <section id="products-section">
+            <header>
+                <h2>Products</h2>
+            </header>
+
+            <!-- Products Text -->
+            <article class="section-content">
+                <img class="dice-size" src="asset/Resin Dice.png">
+                <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
+                <img class="dice-size" src="asset/Acrylic Dice With Bg.png">
+                <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
+                <img class="dice-size" src="asset/Metal Dice With Bg.png">
                 <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
             </article>
         </section>
@@ -62,38 +85,44 @@
 
             <!-- Our Profile Text -->
             <article class="section-content">
-                <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
+                <div class="profile">
+                    <br>
+                    <p>
+                        Founded by a band of adventurers and storytellers, <strong class="text-color">Eraudin Forge</strong> began as a passion project in a rowdy apartment with a rowdy group of friends over weekly D&D sessions.
+                        Our love for worldbuilding, character creation, and crafting epic campaigns inspired us to turn this hobby into a realm of its own.
+                    </p>
+                    <br>
+                    <p>
+                        We specialize in creating <strong class="text-color">immersive accessories and storytelling tools </strong> for tabletop roleplaying games — from hand-poured resin dice to personalized mini for enemies and NPCs alike.
+                    </p>
+                    <br>
+                    <p>
+                        At Eraudin Forge, we believe that every adventurer deserves gear worthy of their own to make their own <strong class="text-color">legend</strong>.
+                    </p>
+                    <br>
+                    <p>
+                        You can order <strong class="text-color">custom dice and mini</strong> suited to build your own  <strong class="text-color">world</strong>.
+                    </p>
+                </div>
             </article>
         </section>
 
         <hr />
 
-        <!-- Portfolio Section -->
-        <section id="portfolio-section">
-            <header>
-                <h2>Portfolio</h2>
-            </header>
 
-            <!-- Portfolio Text -->
-            <article class="section-content">
-                <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
-            </article>
-        </section>
-
-        <hr />
 
         <!-- Message Us Section -->
-        <section id="message-us-section">
+        <section id="message-us-section" class="message-us-section">
             <header>
                 <h2>Message Us</h2>
             </header>
+            <br>
 
             <!-- Form Result-->
             <div class="form-output"> 
                 <p>
                     <br>
                     <strong>Current Time</strong>: 
-
                     <span id="daysOnly"></span>
                     <span id="datesOnly"></span>
                     <span id="monthOnly"></span>
@@ -146,11 +175,11 @@
                         </div>
                     </td>
                     <td>
-                        <input type="radio" id="male" name="gender" value="Male">
+                        <input type="radio" id="male" name="gender" value="Male" class="gender-button">
                         <label for="male">Male</label>
                     </td>
                     <td>
-                        <input type="radio" id="female" name="gender" value="Female">
+                        <input type="radio" id="female" name="gender" value="Female" class="gender-button">
                         <label for="female">Female</label>
                     </td>
                 </table>
@@ -167,10 +196,7 @@
                 </table>
                 <br>
                 <input type="submit" id="submit" class="submit" value="Submit">
-                <script src="js/script.js"></script>
             </form>
-            
-
         </section>
     </main>
 
@@ -180,6 +206,9 @@
     <footer>
         <span>Made by Galenwan</span>
     </footer>
+
+    <!-- Java External -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>

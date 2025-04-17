@@ -1,5 +1,5 @@
 function replaceName() {
-    let name = prompt("Hi~~, what's your name?", "");
+    let name = prompt("Hi, what's your name?", "");
     document.getElementById("name").innerHTML = name
 }
 
@@ -47,16 +47,6 @@ function showDivs(n) {
     imgList[slideIndex - 1].style.display = "block";
 }
 
-/*
-setInterval(() => {
-    plusDivs(1);
-}, 2000);
-1000 ms = 1 s
-*/
-
-
-
-
 const today = new Date();
 const days = today.toLocaleDateString('default', { weekday: 'long'} );
 document.getElementById("daysOnly").innerHTML = days + ", ";
@@ -77,4 +67,4 @@ function displayTime() {
     var timeString = hours + ":" + minutes + ":" + seconds;
     document.getElementById("timeNow").innerHTML = timeString;
   }
-  setInterval(displayTime, 1000); // update every second
+  setInterval(displayTime, 1000); 
